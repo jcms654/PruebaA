@@ -1,27 +1,23 @@
-<p-table #dt1
- [columns]="cols"
- [value]="posts"  
- styleClass="sticky-table"
- [resizableColumns]="true"
- columnResizeMode="expand"
- [responsive]="true" 
- [rows]="20" 
- class="pTable"
- sortMode="multiple"
- [paginator]="true" 
- [rows]="6" 
- [showCurrentPageReport]="true" 
- responsiveLayout="scroll"
- currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
- [scrollable]="true" 
- [rows]="10" 
- scrollHeight="300px"
- [virtualScroll]="true" 
- [virtualRowHeight]="50"
- [autoLayout]="true"
- [globalFilterFields]="['id']">
- >
- 
+ <p-table   #dt1
+            [value]="posts" 
+            [columns]="cols"
+            styleClass="sticky-table"
+            [resizableColumns]="true"
+            columnResizeMode="expand"
+            [responsive]="true"
+            [rows]="20" 
+            class="pTable"
+            sortMode="multiple"
+            [paginator]="true" 
+            [rows]="6" 
+            [showCurrentPageReport]="true" 
+            responsiveLayout="scroll"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+            [scrollable]="true" 
+            scrollHeight="300px"
+            [autoLayout]="true"
+            [globalFilterFields]="['id']"
+  >
 
 	<ng-template pTemplate="caption">
         
