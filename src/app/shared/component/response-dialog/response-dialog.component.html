@@ -1,0 +1,31 @@
+<div class="exit_confirmation">
+    <div class="dialog title w-100 h-100">
+        <div class="dialog__content_title font s24 medium color-00">
+            {{ 'Datos Procesados OK' }}
+        </div>
+        <div class="dialog__content_title font s14 medium color-00">
+            {{'Post:'}}{{ data.id }}
+        </div>
+        <div class="dialog__content_title font s14 medium color-00">
+            {{'Usuario:'}} {{ data.userId }}
+        </div>
+        <div class="font s12 regular color-00 pt-4 mt-3 pb-4">
+             {{ data.title }}
+        </div>
+        <div class="font s12 regular color-00 pt-4 mt-3 pb-4">
+            {{ data.body  }}
+        </div>
+
+        <!-- DIALOG BUTTONS -->
+        <div class="div_buttons">
+            <div mat-dialog-actions class="content flex justify_end">
+                
+                <button appPreventDoubleClick (throttledClick)="$event" mat-button mat-dialog-close class="div_buttons__button font s14 secondary-500"
+                        (click)="close()"> Ok</button>
+            </div>
+        </div>
+        <!-- END DIALOG BUTTONS -->
+
+    </div>
+    <!-- END DIALOG ADD FAVORITES -->
+</div>

@@ -1,0 +1,52 @@
+<div class="exit_confirmation">
+    <div class="dialog title w-100 h-100">
+        <div class="dialog__content_title font s24 medium color-00">
+            {{ 'Detalles del Post' }}
+        </div>
+        <div class="dialog__content_title font s14 medium color-00">
+            {{'Post ID:'}}{{ data.user.id }}
+        </div>
+        <div class="dialog__content_title font s14 medium color-00">
+            {{'Usuario ID:'}}{{ data.user.username }}{{' '}}
+            {{'Nombre:'}} {{ data.user.name }}
+        </div>
+        <div class="font s12 regular color-00 pt-4 mt-3 pb-4">
+            {{'Telefono: '}}{{ data.user.phone}}
+        </div>
+        <div class="font s12 regular color-00 pt-4 mt-3 pb-4">
+            {{'email: '}}{{ data.user.email}}{{' '}}
+            {{'website: '}}{{ data.user.website}}
+        </div>
+
+        <div class="font s12 regular color-00 pt-4 mt-3 pb-4">
+            {{'Direccion: '}}{{ data.user.address.street}}
+            {{ data.user.address.suite}}{{' '}}
+            {{'Zip: '}}{{ data.user.address.zipcode}}
+        </div>
+        <div class="font s12 regular color-00 pt-4 mt-3 pb-4">
+            {{'Compania: '}}{{ data.user.company.name}}{{' '}}
+            {{'Tipo: '}}{{ data.user.company.bs}}{{' '}}
+            {{'Frase: '}}{{ data.user.company.catchPhrase}}
+        </div>
+
+        <div class="font s12 regular color-00 pt-4 mt-3 pb-4" *ngFor="let comment of data.coments; let i = index" [attr.data-index]="i">
+            {{' '}}
+            {{'Nro: '}}{{ comment.id}}{{' '}}
+            {{'Nombre: '}}{{ comment.name}}{{' '}}
+            {{'Comentario: '}}{{ comment.body}}{{' '}}
+            {{'email: '}}{{ comment.email}}{{' '}}
+        </div>
+
+        <!-- DIALOG BUTTONS -->
+        <div class="div_buttons">
+            <div mat-dialog-actions class="content flex justify_end">
+                
+                <button appPreventDoubleClick (throttledClick)="$event" mat-button mat-dialog-close class="div_buttons__button font s14 secondary-500"
+                        (click)="close()"> Ok</button>
+            </div>
+        </div>
+        <!-- END DIALOG BUTTONS -->
+
+    </div>
+    <!-- END DIALOG ADD FAVORITES -->
+</div>

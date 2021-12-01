@@ -1,0 +1,17 @@
+::ng-deep .responseDialog .mat-dialog-container {
+    background-color: white;
+    padding: 1.5rem !important;
+  }
+  
+  .div_select {
+    padding: 2.3rem 2rem;
+  }
+  
+  .div_buttons {
+    .div_buttons__button {
+      line-height: 1.14;
+      letter-spacing: 1.25px;
+      text-transform: uppercase;
+      padding: 1rem;
+    }
+  }

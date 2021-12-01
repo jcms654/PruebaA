@@ -1,0 +1,18 @@
+<form id="dataForm" name="form" [formGroup]="dataForm" class="form" novalidate>
+    <mat-form-field appearance="outline" class="form-element">
+        <mat-label>{{ 'User ID'  }}</mat-label>
+        <input class="no-drop" matInput formControlName="userId" readonly>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-element">
+        <mat-label>{{ 'Title'  }}</mat-label>
+        <textarea class="no-drop" matInput formControlName="title" maxlength="200" cols="30" rows="4" ></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-element">
+        <mat-label>{{ 'Body'  }}</mat-label>
+        <textarea class="no-drop" matInput formControlName="body" maxlength="500" cols="30" rows="4" ></textarea>
+    </mat-form-field>
+    <div class="form-element">
+        <button mat-raised-button color="primary" type="submit" class="button"  (click)="cancel()" >Cancel</button>
+        <button mat-raised-button color="primary" type="submit" class="button"  (click)="save()" >Save</button>
+    </div>
+</form>
